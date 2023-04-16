@@ -6,7 +6,7 @@ export default function Meme() {
      * Challenge: Get a random image from the `memesData` array
      * when the "new meme image" button is clicked.
      * 
-     * Log the URL of the image to the console. (Don't worry
+     * Log the URL of the image to the console. (Do n't worry
      * about displaying the image yet)
      */
     
@@ -16,7 +16,7 @@ export default function Meme() {
         const {url} = memesArray[randomNumber]
         //const urlname = memesArray[randomNumber].url;
         console.log(url)
-    }
+     }
     
     return (
         <main>

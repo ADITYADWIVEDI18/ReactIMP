@@ -18,6 +18,11 @@ function App() {
         })
     }
     
+    
+    /* ...prevThingsArray it is the copy of above contained elements in thingsArray */
+    
+    
+    
     const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
     
     return (

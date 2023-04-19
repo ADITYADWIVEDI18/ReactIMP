@@ -1,0 +1,42 @@
+# App.js
+.........
+ 
+ import React from "react"
+import boxes from "./boxes"
+import Box from "./Box"
+
+export default function App() {
+    const [squares, setSquares] = React.useState(boxes)
+    
+    const squareElements = squares.map(square => (
+        <Box key={square.id} on={square.on} />
+    ))
+    
+    return (
+        <main>
+            {squareElements}
+        </main>
+    )
+}
+
+
+#Box.js
+........
+
+import React from "react"
+
+export default function Box(props) {
+    const [on, setOn] = React.useState(props.on)
+    
+    const styles = {
+        backgroundColor: on ? "#222222" : "transparent"
+    }
+    
+    function toggle() {
+        setOn(prevOn => !prevOn)
+    }
+    
+    return (
+        <div style={styles} className="box" onClick={toggle}></div>
+    )
+}
